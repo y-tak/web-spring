@@ -30,6 +30,9 @@ public class Event {
     private List<Student> studentList=new ArrayList<>();
 
 
+    public List<Student> getStudentList() {
+        return studentList;
+    }
 
     public int getId() {
         return id;
