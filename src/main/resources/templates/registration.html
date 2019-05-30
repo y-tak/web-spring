@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/user/add}" th:object="${appUser}" method="post">
+    <div>
+        <input type="text" placeholder="login" th:field="*{login}">
+    </div>
+    <p th:if="${#fields.hasErrors('login')}" th:errors="*{login}"></p>
+
+    <div>
+        <input type="password" placeholder="password" th:field="*{pwd}">
+    </div>
+    <p><input type="submit" value="Добавить"></p>
+</form>
+
+
+
+</body>
+</html>
